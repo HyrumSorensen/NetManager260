@@ -1,0 +1,41 @@
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+    width: 100vw;
+}
+
+.box {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(138, 164, 204);
+    height: 50vh;
+    width: 25vw;
+    
+}
+form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+input {
+    border-radius: 15px;
+    height: 35px;
+    width: 200px;
+}
+button {
+    border-radius: 15px;
+    background-color: white;
+    height: 35px;
+    width: 80px;
+}
+
+button:hover {
+    background-color:rgb(216, 208, 248)
+}
