@@ -26,8 +26,8 @@ form {
 
 input {
     border-radius: 15px;
-    height: 35px;
-    width: 200px;
+    height: 4.5vh;
+    width: 20vw;
 }
 button {
     border-radius: 15px;
@@ -38,4 +38,19 @@ button {
 
 button:hover {
     background-color:rgb(216, 208, 248)
+}
+
+a:hover {
+    color: rgb(216, 208, 248)
+}
+h6 {
+    font-size: 11px
+}
+.sign-up {
+    color: rgb(53, 126, 93);
+    text-decoration: none;
+}
+
+p {
+    font-size: 10px;
 }
