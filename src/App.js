@@ -11,6 +11,7 @@ import "./App.css";
 import LoginPage from "./screens/LoginPage";
 import SignUp from "./screens/SignUp";
 import Welcome from "./screens/Welcome";
+import AddPerson from "./screens/AddPerson"
 // import UserContext from "./contexts/UserContexts";
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/Sign-Up" element={<SignUp />} />
         <Route path="/Welcome" element={<Welcome />} />
+        <Route path="Add-Person" element={<AddPerson />} />
+
       </Routes>
     // </UserContext.Provider>
   );

@@ -24,6 +24,7 @@ const LoginCard = () => {
       username: userName,
       password: password,
     };
+    window.sessionStorage.setItem("userInfo", userName);
 
     let testingAxios = axios
       .get(`http://localhost:8000/authenticate`, { params: {username: body.username, password: body.password} })

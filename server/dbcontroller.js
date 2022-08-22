@@ -26,7 +26,7 @@ INSERT INTO users (username, password)
 VALUES ('hyrumgary', 'oncegatos');
 
 INSERT INTO people (user_id, name, type, birthday, description)
-VALUES (1, 'Hyrum Sorensen', 'family', '06/27/2000', 'Founder of this Database');
+VALUES (1, 'Hyrum Sorensen', 'Family', '06/27/2000', 'Founder of this Database');
 
    `).then(() => {
             console.log('DB seeded!')
@@ -52,8 +52,18 @@ VALUES (1, 'Hyrum Sorensen', 'family', '06/27/2000', 'Founder of this Database')
       WHERE username='${username}'
       AND password='${password}';
     `).then((dbRes) => {
-      console.log('ran the dang sequelize thing')
+      console.log('Authenticated user')
       res.status(200).send(dbRes[0])
     }).catch(err => console.log(err))
-  }
+  },
+  createNewPerson: (req, res) => {
+    const {userId, name, type, birthday, description } = req.body;
+    sequelize.query( `
+      INSERT INTO people (user_id, name, type, birthday, description)
+      VALUES ('${userId}', '${name}', '${type}', '${birthday}', '${description}')
+    `).then(() => {
+      console.log('successfully added person to database')
+      res.sendStatus(200)
+    }).catch(err => console.log('error adding new user to database'))
+  },
 };

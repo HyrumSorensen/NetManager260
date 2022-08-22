@@ -3,7 +3,7 @@ const MainHeader = () => {
     return (
         <div className='header'>
             <div>
-
+                <h2>NettWork Manager</h2>
             </div>
         </div>
     )

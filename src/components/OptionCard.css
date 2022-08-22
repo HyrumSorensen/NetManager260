@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: solid 2px;
+    border-radius: 15px;
+    border-color: rgb(138, 164, 204);
+    height: 45vh;
+    width: 22vw;
+    
+}
+
+.icon {
+    width: 7vw;
+    height: 12vh;
+    margin-top: 5vh;
+}
+.option-button {
+    border: solid 3px;
+    border-radius: 5px;
+    border-color: rgb(138, 164, 204);
+    height: 8vh;
+    width: 15vw;
+    margin-top: 10vh;
+    
+}
+.option-button:hover {
+    background-color: rgb(76, 255, 195);
+}
