@@ -8,11 +8,6 @@ import AddForm from '../components/AddForm'
 
 const AddPerson = () => {
 
-
-
-
-
-
     return (
         <div>
             <div>

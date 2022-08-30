@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+
 .header {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 14vh;
+    justify-content: center;
+    height: 7vh;
+    width: 100vw;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid grey 1px;
+    font-size: 12px;
+    font-family: 'Indie Flower', cursive;
     width: 100vw;
 }

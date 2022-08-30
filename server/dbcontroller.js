@@ -66,4 +66,14 @@ VALUES (1, 'Hyrum Sorensen', 'Family', '06/27/2000', 'Founder of this Database')
       res.sendStatus(200)
     }).catch(err => console.log('error adding new user to database'))
   },
+  getPeople: (req, res) => {
+    const {user} = req.query
+    sequelize.query( `
+      SELECT * FROM people
+      WHERE user_id=${user};
+    `).then((dbRes) => {
+      console.log('sent info')
+      res.status(200).send(dbRes)
+    }).catch(err => console.log(err))
+  },
 };

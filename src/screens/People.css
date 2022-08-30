@@ -1,0 +1,32 @@
+.search {
+    display: flex;
+    align-items: center;
+}
+
+
+.search-bar {
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 2px;
+}
+
+.type-search {
+    border-radius: 15px;
+    border: solid black 1.5px;
+    height: 5.5vh;
+    width: 13vw;
+    margin-top: 8px;
+    margin-left: 2px;
+}
+.people-boxes {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    overflow: scroll;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2vh
+
+}

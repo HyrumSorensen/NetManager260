@@ -1,0 +1,30 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    width: 70vh;
+    background-color: white;
+    border: solid rgb(138, 164, 204);
+}
+.close{
+    width: 25vw;
+}
+.gohome {
+    width: 25vw
+}
+
+.buttons {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+}
+.name{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+}
