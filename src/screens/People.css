@@ -6,22 +6,24 @@
 
 .search-bar {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-right: 20px;
   margin-left: 2px;
+  border: solid var(--lightishblue) 1.5px;
 }
 
 .type-search {
     border-radius: 15px;
-    border: solid black 1.5px;
-    height: 5.5vh;
+    border: solid var(--lightishblue) 1.5px;
+    height: 5.2vh;
     width: 13vw;
-    margin-top: 8px;
+    margin-top: 30px;
     margin-left: 2px;
 }
 .people-boxes {
     display: flex;
     width: 100vw;
+    min-height: 83vh;
     flex-direction: row;
     overflow: scroll;
     flex-wrap: wrap;

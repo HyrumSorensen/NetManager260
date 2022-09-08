@@ -62,7 +62,9 @@ const AddForm = () => {
   
   return (
     <div>
-      <form>
+      <div className='the-form-box'>
+      <h1>Add A Person To Your Network</h1>
+      <form className='the-form'>
         <div className="name">
           <input onChange={firstNameSetter} type="text" placeholder="First Name" value={firstName} required />
           <input onChange={lastNameSetter} type="text" placeholder="Last Name" value={lastName}required/>
@@ -80,7 +82,7 @@ const AddForm = () => {
           <label htmlFor="Romantic Possibility">Romantic Possibility</label> <br></br>
         </div>
         <div className='birthday'>
-            <label htmlFor="birthday">Birthday</label>
+            <label className='birthday-label'htmlFor="birthday">Birthday</label>
             <input onChange={birthdaySetter} name='birthday' type='date' min="1900-01-01" max="2023-12-31" value={birthday}/>
         </div>
         <div className='description'>
@@ -88,6 +90,7 @@ const AddForm = () => {
         </div>
         <button onClick={submitHandler} type='submit'>Submit</button>
       </form>
+      </div>
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <div className="modal">
             <h5>User successfully added to your personal database! </h5>

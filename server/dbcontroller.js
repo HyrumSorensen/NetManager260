@@ -76,4 +76,26 @@ VALUES (1, 'Hyrum Sorensen', 'Family', '06/27/2000', 'Founder of this Database')
       res.status(200).send(dbRes)
     }).catch(err => console.log(err))
   },
+  deletePerson: (req, res) => {
+    const id = +req.params.id;
+    sequelize.query(`
+    DELETE FROM people
+    WHERE person_id=${id};
+    `)
+    .then((dbRes) => {
+     res.status(200).send(dbRes[0])
+     })
+    .catch(err => console.log(err))
+  },
+  editPerson: (req, res) => {
+    const{name, type, birthday, description, id} = req.body;
+    sequelize.query(`
+      UPDATE people
+      SET name='${name}', type='${type}', birthday='${birthday}', description='${description}'
+      WHERE person_id=${id};
+    `).then((dbRes) => {
+      res.status(200).send(dbRes[0])
+    })
+    .catch(err => console.log(err))
+  },
 };

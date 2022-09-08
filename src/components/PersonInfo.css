@@ -2,7 +2,7 @@
     display: flex;
     width: 18vw;
     height: 35vh;
-    border: solid black;
+    border: solid var(--lightishblue);
     border-radius: 15px;
     align-items: center;
     flex-direction: column;
@@ -52,7 +52,7 @@
 }
 
 .pencil {
-    height: 4vh;
+    height: 5vh;
     width: 2.5vw;
     object-fit: cover;
     z-index: 5;
@@ -66,5 +66,34 @@
     content: url("https://img.icons8.com/ultraviolet/344/edit.png");
 }
 
+.edit-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 80vw;
+    border-radius: 15px;
+    margin-top: 10px;
+    border: solid black 1px;
+    background-color: white;
+}
+
+.delete-cancel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    margin-left: 20vh;
+    gap: 15vh;
+}
+
+.bigger-buttons {
+    height: 10vh;
+    width: 20vw;
+    border: solid black 2px;
+}
+.bigger-buttons:hover {
+    background-color: rgb(182, 66, 66);
+}
 
     /* content: url("https://img.icons8.com/ultraviolet/344/edit.png"); */

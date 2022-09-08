@@ -25,6 +25,9 @@ const People = () => {
   };
 
   useEffect(() => {
+    if(window.sessionStorage.getItem("user") == -1) {
+      window.location.assign("http://localhost:3000")
+    }
     axios
       .get("http://localhost:8000/getPeople", { params: { user: body.user } })
       .then((res) => {

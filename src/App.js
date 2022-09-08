@@ -8,11 +8,12 @@ import {
 import { useState } from "react";
 import "./App.css";
 
-import LoginPage from "./screens/LoginPage";
-import SignUp from "./screens/SignUp";
-import Welcome from "./screens/Welcome";
+import LoginPage from "./screens/LoginPage"
+import SignUp from "./screens/SignUp"
+import Welcome from "./screens/Welcome"
 import AddPerson from "./screens/AddPerson"
 import People from "./screens/People"
+import RandomGuy from "./screens/RandomGuy"
 // import UserContext from "./contexts/UserContexts";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/Welcome" element={<Welcome />} />
         <Route path="Add-Person" element={<AddPerson />} />
         <Route path="My-NettWork" element={<People/>} />
+        <Route path="Generator" element={<RandomGuy/>} />
       </Routes>
     // </UserContext.Provider>
   );
