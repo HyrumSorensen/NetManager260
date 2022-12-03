@@ -1,4 +1,5 @@
 import {useContext, useEffect} from "react";
+import {useNavigate} from 'react-router-dom';
 import './Welcome.css'
 import MainHeader from '../components/MainHeader'
 import OptionCard from '../components/OptionCard'
@@ -7,24 +8,25 @@ import OptionCard from '../components/OptionCard'
 
 
 const Welcome = () => {
+    let navigate = useNavigate();
     // let myContext = useContext(UserContext);
     const user = window.sessionStorage.getItem("user");
     //below is the username :D
     const userinfo = window.sessionStorage.getItem("userInfo")
 
     const addNetwork = () => {
-        window.location.assign('http://localhost:3000/Add-Person')
+        navigate('Add-Person')
     }
     const myNetWork = () => {
-        window.location.assign('http://localhost:3000/My-NettWork')
+        navigate('My-NettWork')
     }
     const easterEgg = () => {
-        window.location.assign('http://localhost:3000/Generator')
+        navigate("Generator")
     }
 
     useEffect(() => {
         if(window.sessionStorage.getItem("user") == -1) {
-          window.location.assign("http://localhost:3000")
+          navigate("/")
         }
       }, []);
 

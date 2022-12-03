@@ -1,5 +1,5 @@
 import { useState, useEffect, } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./LoginCard.css";
 
@@ -7,9 +7,8 @@ import "./LoginCard.css";
 // import UserContext from '../contexts/UserContexts';
 
 const LoginCard = () => {
-
+let navigate = useNavigate();
   // let myContext = useContext(UserContext);
-
 
   let [userName, setUserName] = useState("");
   let [password, setPassword] = useState("");
@@ -26,24 +25,26 @@ const LoginCard = () => {
     };
     window.sessionStorage.setItem("userInfo", userName);
 
-    let testingAxios = axios
-      .get(`http://localhost:8000/authenticate`, { params: {username: body.username, password: body.password} })
-      .then(res => {
-        if (res.data.length > 0) {
-          let guy = res.data[0].user_id
-          console.log('success! User: ', guy)
-          // myContext.setUser(guy)
-          window.sessionStorage.setItem("user", guy)
-          window.location.assign("http://localhost:3000/Welcome")
+    // let testingAxios = axios
+    //   .get(`http://localhost:8000/authenticate`, { params: {username: body.username, password: body.password} })
+    //   .then(res => {
+    //     if (res.data.length > 0) {
+    //       let guy = res.data[0].user_id
+    //       console.log('success! User: ', guy)
+    //       // myContext.setUser(guy)
+          window.sessionStorage.setItem("user", userName)
+          // window.location.assign("http://localhost:3000/Welcome")
+          navigate("/Welcome");
+ 
 
-        } else {
-          alert('wrong username or password, please try again')
-        }
+      //   } else {
+      //     alert('wrong username or password, please try again')
+      //   }
   
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      // })
+      // .catch((err) => {
+      //   console.log(err);
+      // });
   };
   const setStateUsername = (e) => {
     setUserName(e.target.value);
@@ -52,11 +53,11 @@ const LoginCard = () => {
     setPassword(e.target.value);
   };
 
-
   return (
     <div className="main-div">
       <div className="box">
         <h2>Login</h2>
+       
         <form onSubmit={submitHandler}>
           <input
             onChange={setStateUsername}

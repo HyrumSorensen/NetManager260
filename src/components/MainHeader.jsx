@@ -1,7 +1,9 @@
 import "./MainHeader.css";
 import Popup from 'reactjs-popup'
 import {useState} from 'react'
+import {useNavigate} from 'react-router-dom';
 const MainHeader = () => {
+    let navigate = useNavigate();
 
     const [open, setOpen] = useState(false);
     const closeModal = () =>  {
@@ -14,35 +16,35 @@ const MainHeader = () => {
 
     const takeHome = () => {
         if (window.sessionStorage.getItem("user") != -1) {
-            window.location.assign("http://localhost:3000/Welcome")
+            navigate("/Welcome")
         } else {
             alert('please log in before navigating the page')
         }
     }
     const takeNetwork = () => {
         if (window.sessionStorage.getItem("user") != -1) {
-            window.location.assign("http://localhost:3000/My-Nettwork")
+            navigate("/Welcome/My-Nettwork")
         } else {
             alert('please log in before navigating the page')
         }
     }
     const takeAdd = () => {
         if (window.sessionStorage.getItem("user") != -1) {
-            window.location.assign("http://localhost:3000/Add-Person")
+            navigate("/Welcome/Add-Person")
         } else {
             alert('please log in before navigating the page')
         }
     }
     const takeEgg = () => {
       if (window.sessionStorage.getItem("user") != -1) {
-        window.location.assign("http://localhost:3000/Generator")
+        navigate("/Welcome/Generator")
     } else {
         alert('please log in before navigating the page')
     }
     }
     const logOut = () => {
             window.sessionStorage.setItem("user", -1)
-            window.location.assign("http://localhost:3000")   
+            navigate("/")   
     }
 
   return (

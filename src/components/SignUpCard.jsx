@@ -1,9 +1,10 @@
 import {useState} from 'react'
 import './LoginCard.css'
 import axios from 'axios'
-
+import {useNavigate} from 'react-router-dom'
 
 const SignUpCard = () => {
+    let navigate = useNavigate();
     let [userName, setUserName] = useState('')
     let [password, setPassword] = useState('')
     
@@ -22,7 +23,7 @@ const SignUpCard = () => {
             alert('Account Successfully Created!')
 
         })
-        window.location.assign("http://localhost:3000");
+        navigate('/')
     }
     const setStateUsername = (e) => {
         setUserName(e.target.value)
